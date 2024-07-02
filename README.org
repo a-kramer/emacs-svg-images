@@ -1,0 +1,129 @@
+#+title: README
+#+author: Andrei Kramer-Miehe
+#+date: <2024-07-02 Tue>
+
+* SVG images and the emacs svg package
+
+Here are some thoughts about concepts that I don't find immediately
+self evident.
+
+** SVG images are weird
+
+Pixels are weird. The default unit in SVG images
+are pixels. But, this is a vector graphic format, so pixels make no
+sense. Vector graphics are great because you can zoom in and see no
+anti-aliasing artifacts. Zooming in means that more screen pixels are
+displaying each image pixel.
+
+By default, the svg elisp package will print unitless numbers, which
+by default are interpreted as pixels. I interpret this as:
+
+\begin{equation}
+ \qty{1}{px} = \qty{f}{cm}
+\end{equation}
+where $f$ is some small fractional number. But, in some circumstances
+a software may try to make the pixel size of the image literally
+correspond to the number of pixels of a screen, before anyone tries to
+zoom anything.
+
+TIFFs, PNGs and JPGs can also be zoomed, even though they are more
+literally connected to pixels. So, maybe this is not so weird.
+
+** XML is weird
+
+In XML documents, data is bracketed in tags. This isn't very bad,
+perhaps inelegant. But, all XML formats keep storing important data as
+attributes. So, some of the data is hierarchical, but eventually
+people give up and store lots of data in a serial string that is
+parsed differently.
+
+One important example:
+
+#+begin_src xml
+  <path d="M 6cm 54cm L 6cm -46cm" stroke="black" stroke-width="3mm"></path>
+#+end_src
+
+where the =path= data block is empty, but all information is in the
+=d= attribute, which has its own internal rules (for parsing).
+
+I guess that this could have looked like this:
+#+begin_src xml
+  <path stroke="black" stroke-width="3mm">
+    <move unit="cm">
+      <x>6</x>
+      <y>54</y>
+    </move>
+    <line unit="cm">
+      <x>6</x>
+      <y>-46</y>
+    </line>
+  </path>
+  <!-- or whatever -->
+#+end_src
+
+XML also comes with namespaces, they make everything longer and more
+complicated. Software does not try to write minimal XML.
+
+I created an fodg image with LibreOffice Draw, it's an XML format. The
+image is a 4:3 screen page, with one circle on it. The file has 36113
+characters...
+
+#+begin_src sh
+grep -o xmlns arbitrary-circle.fodg | wc -l | awk '{print "xmlns: " $1}'
+xml_grep --count '*' arbitrary-circle.fodg | awk 'NR==1 {print "any-tag: ", $2}'
+#+end_src
+
+#+RESULTS:
+| xmlns:   |  63 |
+| any-tag: | 311 |
+
+So, there are 311 tags to describe a single circle on a rectangle, and 63 namespaces are
+invoked. I don't like any of this.
+
+** In Summary
+
+I don't like XML, SVG, nor CSS. But, they are /available/.
+
+Elisp (or any lisp), are interesting enough to experiment with, and I
+am trying to learn the syntax by constructing images with code.
+
+This is similar to TikZ in a way, but not as tied to \LaTeX.
+
+Maybe elisp is not the most awesomest language to ever exist, but I
+think that (e)lisp files are more readable than xml content, because they
+are written by humans.
+
+I don't know of a vector image format that is widely adopted, and
+accessible (and not proprietary). I guess that Inkscape would offer
+it, if it existed. But, my search continues.
+
+* A Circle with some label on it
+
+[[svg-test.el][svg-test.el]] is a small script that creates a circle with a label on it.
+Here I wanted to follow two rules:
+
+1. The coordinates must not be in quoted blocks (they need to be
+   subject to calculations).
+2. The size/length quantities should ideally be in some physical unit
+   (e.g. centimeters, or em).
+
+The examples in the official documentation use quoting and literal
+numbers mostly.
+
+#+begin_src elisp
+  (svg-path svg '((moveto ((200 . 100)))
+		  (lineto ((100 . 200) (0 . 100))))
+	    :fill "yellow" :stroke "red")
+#+end_src
+
+where the entire =svg-path= is quoted and cannot contain calculations
+(Or at least: I don't know how it could).  So, instead:
+
+#+begin_src elsip
+    (svg-path svg (list (list 'moveto (list (cons (* 2 100) 100))) ; or whatever calculations are necessary
+		  (list 'lineto (list (cons 100 200) (cons 0 100))))
+	    :fill "yellow" :stroke "red")
+#+end_src
+
+See, the full el file. The result is [[circle.svg][circle.svg]], albeit re-indented a
+bit (=svg-print= prints everything in one line)

@@ -1,0 +1,7 @@
+<svg width="12cm" height="8cm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-width="3mm"> 
+  <circle cx="6cm" cy="4cm" r="3cm" stroke="black" fill="blue" stroke-width="3mm">
+  </circle> 
+  <text font-family="Fira Code" y="4cm" x="3cm" stroke-width="3mm"> Circle: |x&#178; + y&#178;| &lt;= 3</text> 
+  <path d="M 6cm 54cm L 6cm -46cm" stroke="black" stroke-width="3mm">
+  </path>
+</svg>
