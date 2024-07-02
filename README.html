@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-07-02 Tue 16:15 -->
+<!-- 2024-07-02 Tue 17:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>README</title>
@@ -233,20 +233,20 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org20888c8">1. SVG images and the emacs svg package</a>
+<li><a href="#org1b6197d">1. SVG images and the emacs svg package</a>
 <ul>
-<li><a href="#org90dcfa5">1.1. SVG images are weird</a></li>
-<li><a href="#orga2731f0">1.2. XML is weird</a></li>
-<li><a href="#org7059fc8">1.3. In Summary</a></li>
+<li><a href="#orgf7adbea">1.1. SVG images are weird</a></li>
+<li><a href="#org36d97dc">1.2. XML is weird</a></li>
+<li><a href="#org32a8d09">1.3. In Summary</a></li>
 </ul>
 </li>
-<li><a href="#orgae046be">2. A Circle with some label on it</a></li>
+<li><a href="#org7ba0900">2. A Circle with some label on it</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org20888c8" class="outline-2">
-<h2 id="org20888c8"><span class="section-number-2">1.</span> SVG images and the emacs svg package</h2>
+<div id="outline-container-org1b6197d" class="outline-2">
+<h2 id="org1b6197d"><span class="section-number-2">1.</span> SVG images and the emacs svg package</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Here are some thoughts about concepts that I don't find immediately
@@ -263,8 +263,8 @@ I also like TikZ and use it.
 </p>
 </div>
 
-<div id="outline-container-org90dcfa5" class="outline-3">
-<h3 id="org90dcfa5"><span class="section-number-3">1.1.</span> SVG images are weird</h3>
+<div id="outline-container-orgf7adbea" class="outline-3">
+<h3 id="orgf7adbea"><span class="section-number-3">1.1.</span> SVG images are weird</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Pixels are weird. The default unit in SVG images
@@ -296,8 +296,8 @@ literally connected to pixels. So, maybe this is not so weird.
 </div>
 </div>
 
-<div id="outline-container-orga2731f0" class="outline-3">
-<h3 id="orga2731f0"><span class="section-number-3">1.2.</span> XML is weird</h3>
+<div id="outline-container-org36d97dc" class="outline-3">
+<h3 id="org36d97dc"><span class="section-number-3">1.2.</span> XML is weird</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 In XML documents, data is bracketed in tags. This isn't very bad,
@@ -312,7 +312,9 @@ One important example:
 </p>
 
 <div class="org-src-container">
-<pre class="src src-xml">&lt;path d="M 6cm 54cm L 6cm -46cm" stroke="black" stroke-width="3mm"&gt;&lt;/path&gt;
+<pre class="src src-xml">&lt;!-- here units are not allowed: --&gt;
+&lt;path d="M 6 54 L 6 -46" stroke="black" stroke-width="3"&gt;&lt;/path&gt;
+&lt;!-- but in other places they are allowed --&gt;
 </pre>
 </div>
 
@@ -381,11 +383,19 @@ xml_grep --count '*' arbitrary-circle.fodg | awk 'NR==1 {print "any-tag: ", $2}'
 So, there are 311 tags to describe a single circle on a rectangle, and 63 namespaces are
 invoked. I don't like any of this.
 </p>
+
+<p>
+Observe that for some reason, the fodg file contains my <code>PrinterSetup</code>
+with <code>config:type</code>"base64Binary"=. And also reveals where I was, when I
+made it. None of this is necessary to draw a circle. The eps file is
+not compressed, but much smaller (probably still contains unnecessary
+data): 2868 characters.
+</p>
 </div>
 </div>
 
-<div id="outline-container-org7059fc8" class="outline-3">
-<h3 id="org7059fc8"><span class="section-number-3">1.3.</span> In Summary</h3>
+<div id="outline-container-org32a8d09" class="outline-3">
+<h3 id="org32a8d09"><span class="section-number-3">1.3.</span> In Summary</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 I don't like XML, SVG, nor CSS. But, they are <i>available</i>.
@@ -411,8 +421,8 @@ it, if it existed. But, my search continues.
 </div>
 </div>
 
-<div id="outline-container-orgae046be" class="outline-2">
-<h2 id="orgae046be"><span class="section-number-2">2.</span> A Circle with some label on it</h2>
+<div id="outline-container-org7ba0900" class="outline-2">
+<h2 id="org7ba0900"><span class="section-number-2">2.</span> A Circle with some label on it</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <a href="./svg-test.el">svg-test.el</a> is a small script that creates a circle with a label on it.
@@ -463,13 +473,21 @@ See, the full el file. The result is:
 &#x2026; albeit re-indented with new linefeeds inserted to make it more readable.
 Unedited <code>svg-print</code> has everything in one line.
 </p>
+
+<p>
+Unfortunately, the path command in SVG, with the weird string parsing
+rules doesn't understand units, so, while most things work the path
+command doesn't. In SVG language they use words like "viewport"
+coordinates. So, perhaps we need to define functions that convert
+between centimeters and pixels.
+</p>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2024-07-02 Tue 00:00</p>
 <p class="author">Author: Andrei Kramer-Miehe</p>
-<p class="date">Created: 2024-07-02 Tue 16:15</p>
+<p class="date">Created: 2024-07-02 Tue 17:21</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

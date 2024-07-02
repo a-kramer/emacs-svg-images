@@ -45,7 +45,9 @@ parsed differently.
 One important example:
 
 #+begin_src xml
-  <path d="M 6cm 54cm L 6cm -46cm" stroke="black" stroke-width="3mm"></path>
+  <!-- here units are not allowed: -->
+  <path d="M 6 54 L 6 -46" stroke="black" stroke-width="3"></path>
+  <!-- but in other places they are allowed -->
 #+end_src
 
 where the =path= data block is empty, but all information is in the
@@ -84,6 +86,12 @@ xml_grep --count '*' arbitrary-circle.fodg | awk 'NR==1 {print "any-tag: ", $2}'
 
 So, there are 311 tags to describe a single circle on a rectangle, and 63 namespaces are
 invoked. I don't like any of this.
+
+Observe that for some reason, the fodg file contains my =PrinterSetup=
+with =config:type="base64Binary"=. And also reveals where I was, when I
+made it. None of this is necessary to draw a circle. The eps file is
+not compressed, but much smaller (probably still contains unnecessary
+data): 2868 characters.
 
 ** In Summary
 
