@@ -135,3 +135,9 @@ See, the full el file. The result is:
 
 ... albeit re-indented with new linefeeds inserted to make it more readable.
 Unedited =svg-print= has everything in one line.
+
+Unfortunately, the path command in SVG, with the weird string parsing
+rules doesn't understand units, so, while most things work the path
+command doesn't. In SVG language they use words like "viewport"
+coordinates. So, perhaps we need to define functions that convert
+between centimeters and pixels.
