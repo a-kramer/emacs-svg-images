@@ -7,6 +7,11 @@
 Here are some thoughts about concepts that I don't find immediately
 self evident.
 
+The code written here constructs images in a mathematical way,
+ideally. This is similar to TikZ in a way, but not as tied to LaTeX.
+
+I also like TikZ and use it.
+
 ** SVG images are weird
 
 Pixels are weird. The default unit in SVG images
@@ -19,7 +24,7 @@ By default, the svg elisp package will print unitless numbers, which
 by default are interpreted as pixels. I interpret this as:
 
 \begin{equation}
- \qty{1}{px} = \qty{f}{cm}
+ 1\,\text{px} = f\,\text{cm}
 \end{equation}
 where $f$ is some small fractional number. But, in some circumstances
 a software may try to make the pixel size of the image literally
@@ -68,7 +73,7 @@ I created an fodg image with LibreOffice Draw, it's an XML format. The
 image is a 4:3 screen page, with one circle on it. The file has 36113
 characters...
 
-#+begin_src sh
+#+begin_src sh "XML output is verbose" :exports both
 grep -o xmlns arbitrary-circle.fodg | wc -l | awk '{print "xmlns: " $1}'
 xml_grep --count '*' arbitrary-circle.fodg | awk 'NR==1 {print "any-tag: ", $2}'
 #+end_src
@@ -87,8 +92,6 @@ I don't like XML, SVG, nor CSS. But, they are /available/.
 Elisp (or any lisp), are interesting enough to experiment with, and I
 am trying to learn the syntax by constructing images with code.
 
-This is similar to TikZ in a way, but not as tied to \LaTeX.
-
 Maybe elisp is not the most awesomest language to ever exist, but I
 think that (e)lisp files are more readable than xml content, because they
 are written by humans.
@@ -99,7 +102,7 @@ it, if it existed. But, my search continues.
 
 * A Circle with some label on it
 
-[[svg-test.el][svg-test.el]] is a small script that creates a circle with a label on it.
+[[./svg-test.el][svg-test.el]] is a small script that creates a circle with a label on it.
 Here I wanted to follow two rules:
 
 1. The coordinates must not be in quoted blocks (they need to be
@@ -120,10 +123,15 @@ where the entire =svg-path= is quoted and cannot contain calculations
 (Or at least: I don't know how it could).  So, instead:
 
 #+begin_src elsip
-    (svg-path svg (list (list 'moveto (list (cons (* 2 100) 100))) ; or whatever calculations are necessary
+    (svg-path svg (list (list 'moveto (list (cons (* 2 100) 100))) ; e.g.
 		  (list 'lineto (list (cons 100 200) (cons 0 100))))
 	    :fill "yellow" :stroke "red")
+;; or whatever calculations are necessary
 #+end_src
 
-See, the full el file. The result is [[circle.svg][circle.svg]], albeit re-indented a
-bit (=svg-print= prints everything in one line)
+See, the full el file. The result is:
+
+[[./circle.svg][circle.svg]],
+
+... albeit re-indented with new linefeeds inserted to make it more readable.
+Unedited =svg-print= has everything in one line.
