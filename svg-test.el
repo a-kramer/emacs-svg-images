@@ -1,3 +1,6 @@
+;;; In this file, I tried to create an SVG file, where the unit of
+;;; length is given explicitly, e.g.: 3cm. But, this does not work with
+;;; path elements.
 (require 'svg)
 (defun x (point) "get x component of POINT" (car point))
 (defun y (point) "get y component of POINT" (cdr point))

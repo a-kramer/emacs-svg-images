@@ -1,8 +1,6 @@
-#+title: README
+#+title: SVG Images in Emacs
 #+author: Andrei Kramer-Miehe
 #+date: <2024-07-02 Tue>
-
-* SVG images and the emacs svg package
 
 Here are some thoughts about concepts that I don't find immediately
 self evident.
@@ -12,7 +10,7 @@ ideally. This is similar to TikZ in a way, but not as tied to LaTeX.
 
 I also like TikZ and use it.
 
-** SVG images are weird
+* SVG images are weird
 
 Pixels are weird. The default unit in SVG images
 are pixels. But, this is a vector graphic format, so pixels make no
@@ -34,7 +32,7 @@ zoom anything.
 TIFFs, PNGs and JPGs can also be zoomed, even though they are more
 literally connected to pixels. So, maybe this is not so weird.
 
-** XML is weird
+* XML is weird
 
 In XML documents, data is bracketed in tags. This isn't very bad,
 perhaps inelegant. But, all XML formats keep storing important data as
@@ -146,6 +144,42 @@ Unedited =svg-print= has everything in one line.
 
 Unfortunately, the path command in SVG, with the weird string parsing
 rules doesn't understand units, so, while most things work the path
-command doesn't. In SVG language they use words like "viewport"
+command doesn't. In SVG language they use words like "viewport", viewBox, user
 coordinates. So, perhaps we need to define functions that convert
 between centimeters and pixels.
+
+There is a bad workaround, whcih requires a =viewBox= attribute to be
+defined, but the emacs svg package doesnt do that.
+
+** Summary
+
+The =path= element prevents SVG images to be in physical units without
+postprocessing what =svg-print= writes.
+
+* Improved ELISP Code
+
+In the second version of this script
+[[./svg-test-px.el][svg-test-px.el]], the two helper functions =cm=
+and =mm= are now converting the input to pixels and don't add a unit
+to them to keep the =path= elements happy, they also round to the
+nearest pixel. DPI values are often not up to us, it is not stored in
+the SVG file itself. So, if Inkscape changes its default DPI value for
+exports, then the image size will probably change when the image is
+exported to PDF (not tested).
+
+I wonder what a vector display would project.
+
+But, since DPI values are in relation to inches, pixels per centimeter
+is not a round number for a given integer DPI value, therefore we
+round, this may create unwanted 1-px-gaps somewhere.
+
+Font size is probably in pixels as well, when writing the elisp
+attribute. Using a conversion function from points to pixels makes the
+font-size almost correct in Inkscape.
+
+** Summary
+
+The image now works, it just makes no sense as a vector graphic. But,
+exported to PDF, it becomes exactly 12cm × 8cm (as intended, with the
+guessed DPI). Exported to PNG it has exactly the number of pixels the
+raw SVG numbers say.
