@@ -13,7 +13,7 @@
 (setq svg (svg-create (cm 12) (cm 8) :stroke-width (mm 1)))
 (setq circle '(6 . 4)) ; circle mid-point
 (setq radius 3)        ; same circle
-(setq description (format "Circle: |x² + y²| <= %i" radius))
+(setq description (format "Circle: √|x² + y²| <= %i" radius))
 (svg-circle svg (cm (x circle)) (cm (y circle)) (cm radius)
             :fill-color "blue"
             :stroke "black")
