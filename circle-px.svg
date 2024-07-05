@@ -1,1 +1,9 @@
-<svg width="454" height="302" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-width="4"> <circle cx="227" cy="151" r="113" stroke="black" fill="blue" stroke-width="4"></circle> <text font-size="18" font-family="Fira Code" y="151" x="114" stroke-width="4"> Circle: sqrt(x&#178; + y&#178;) &lt;= 113</text> <path d="M 227 264 L 227 38" fill="blue" stroke="black" stroke-width="4"></path></svg>
+<!-- all numbers in px (not pt) -->
+<svg width="454" height="302" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-width="4">
+  <circle cx="227" cy="151" r="113" stroke="black" fill="blue" stroke-width="4">
+  </circle>
+  <path d="M 227 264 L 227 38" fill="blue" stroke="black" stroke-width="4">
+  </path>
+  <text font-size="18" font-family="Fira Code" fill="white" y="161" x="194" stroke-width="4"> Circle</text>
+  <text font-size="18" font-family="Fira Code" fill="white" y="141" x="117" stroke-width="4"> sqrt(x&#178; + y&#178;) &lt;= 113</text>
+</svg>

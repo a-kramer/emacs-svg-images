@@ -18,21 +18,31 @@
 (setq svg (svg-create (cm 12) (cm 8) :stroke-width (mm 1)))
 (setq circle (cons (cm 6) (cm 4))) ; circle mid-point
 (setq radius (cm 3))               ; same circle
-(setq description (format "Circle: sqrt(x² + y²) <= %i" radius))
+(setq title "Circle")
+(setq description (format "sqrt(x² + y²) <= %i" radius))
 (svg-circle svg (x circle) (y circle) radius
             :fill-color "blue"
             :stroke "black")
-(svg-text svg description
-          :x (- (x circle) radius)
-          :y (y circle)
-          :font-family "Fira Code"
-          :font-size (pt 14)) ; svg font-size is in px not pt, apparently
 (setq commands
       (list
        (list 'moveto (list (cons (x circle) (+ (y circle) radius))))
        (list 'lineto (list (cons (x circle) (- (y circle) radius))))))
 (svg-path svg commands :stroke-color "black" :fill-color "blue")
+(svg-text svg title
+	  :x (round (- (x circle) (* 0.55 (string-pixel-width title))))
+	  :y (round (+ (y circle) (pt 8)))
+	  :fill "white"
+	  :font-family "Fira Code"
+	  :font-size (pt 14))
+(svg-text svg description
+          :x (round (- (x circle) (* 0.55 (string-pixel-width description))))
+          :y (round (- (y circle) (pt 8)))
+	  :fill "white"
+          :font-family "Fira Code"
+          :font-size (pt 14)) ; svg font-size is in px not pt, apparently
 (with-temp-file "circle-px.svg"
     (set-buffer-multibyte nil)
-    (svg-print svg))
+    (insert "<!-- all numbers in px (not pt) -->")
+    (svg-print svg)
+    (break-xml))
 
