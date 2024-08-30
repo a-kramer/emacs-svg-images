@@ -1,0 +1,425 @@
+<!-- all numbers in px (not pt) -->
+<svg width="794" height="1123" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke-width="1"> 
+  <polyline points="15 15, 15 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="31 15, 31 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="45 15, 45 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="59 15, 59 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="71 15, 71 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="82 15, 82 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="93 15, 93 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="103 15, 103 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="113 15, 113 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="121 15, 121 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="130 15, 130 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="138 15, 138 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="146 15, 146 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="153 15, 153 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="160 15, 160 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="167 15, 167 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="174 15, 174 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="180 15, 180 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="186 15, 186 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="192 15, 192 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="197 15, 197 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="245 15, 245 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="282 15, 282 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="312 15, 312 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="338 15, 338 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="360 15, 360 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="380 15, 380 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="397 15, 397 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="397 15, 397 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="413 15, 413 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="427 15, 427 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="441 15, 441 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="453 15, 453 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="464 15, 464 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="475 15, 475 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="485 15, 485 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="495 15, 495 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="503 15, 503 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="512 15, 512 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="520 15, 520 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="528 15, 528 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="535 15, 535 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="542 15, 542 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="549 15, 549 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="556 15, 556 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="562 15, 562 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="568 15, 568 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="574 15, 574 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="579 15, 579 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="627 15, 627 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="664 15, 664 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="694 15, 694 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="720 15, 720 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="742 15, 742 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="762 15, 762 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="779 15, 779 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 15, 15 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="82 15, 82 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="130 15, 130 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="167 15, 167 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="197 15, 197 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="223 15, 223 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="245 15, 245 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="265 15, 265 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="282 15, 282 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="298 15, 298 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="312 15, 312 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="326 15, 326 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="338 15, 338 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="349 15, 349 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="360 15, 360 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="370 15, 370 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="380 15, 380 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="388 15, 388 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="397 15, 397 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="397 15, 397 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="464 15, 464 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="512 15, 512 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="549 15, 549 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="579 15, 579 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="605 15, 605 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="627 15, 627 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="647 15, 647 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="664 15, 664 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="680 15, 680 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="694 15, 694 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="708 15, 708 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="720 15, 720 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="731 15, 731 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="742 15, 742 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="752 15, 752 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="762 15, 762 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="770 15, 770 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="779 15, 779 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 15, 15 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="397 15, 397 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="512 15, 512 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="579 15, 579 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="627 15, 627 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="664 15, 664 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="694 15, 694 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="720 15, 720 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="742 15, 742 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="762 15, 762 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="779 15, 779 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="15 15, 779 15" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 38, 779 38" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 58, 779 58" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 77, 779 77" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 95, 779 95" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 111, 779 111" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 127, 779 127" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 141, 779 141" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 155, 779 155" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 167, 779 167" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 180, 779 180" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 191, 779 191" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 202, 779 202" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 213, 779 213" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 223, 779 223" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 232, 779 232" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 242, 779 242" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 251, 779 251" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 259, 779 259" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 268, 779 268" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 276, 779 276" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 344, 779 344" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 397, 779 397" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 440, 779 440" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 477, 779 477" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 509, 779 509" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 536, 779 536" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 562, 779 562" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 562, 779 562" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 584, 779 584" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 605, 779 605" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 624, 779 624" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 641, 779 641" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 658, 779 658" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 673, 779 673" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 687, 779 687" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 701, 779 701" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 714, 779 714" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 726, 779 726" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 738, 779 738" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 749, 779 749" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 759, 779 759" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 769, 779 769" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 779, 779 779" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 788, 779 788" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 797, 779 797" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 806, 779 806" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 814, 779 814" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 822, 779 822" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 891, 779 891" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 943, 779 943" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 987, 779 987" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 1023, 779 1023" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 1055, 779 1055" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 1083, 779 1083" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 1108, 779 1108" stroke="gray" stroke-width="1">
+  </polyline> 
+  <polyline points="15 15, 779 15" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 111, 779 111" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 180, 779 180" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 232, 779 232" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 276, 779 276" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 312, 779 312" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 344, 779 344" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 372, 779 372" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 397, 779 397" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 420, 779 420" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 440, 779 440" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 459, 779 459" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 477, 779 477" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 493, 779 493" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 509, 779 509" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 523, 779 523" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 536, 779 536" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 549, 779 549" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 562, 779 562" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 562, 779 562" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 658, 779 658" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 726, 779 726" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 779, 779 779" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 822, 779 822" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 859, 779 859" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 891, 779 891" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 918, 779 918" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 943, 779 943" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 966, 779 966" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 987, 779 987" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 1006, 779 1006" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 1023, 779 1023" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 1040, 779 1040" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 1055, 779 1055" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 1069, 779 1069" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 1083, 779 1083" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 1096, 779 1096" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 1108, 779 1108" stroke="black" stroke-width="2">
+  </polyline> 
+  <polyline points="15 15, 779 15" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="15 562, 779 562" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="15 726, 779 726" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="15 822, 779 822" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="15 891, 779 891" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="15 943, 779 943" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="15 987, 779 987" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="15 1023, 779 1023" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="15 1055, 779 1055" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="15 1083, 779 1083" stroke="red" stroke-width="3">
+  </polyline> 
+  <polyline points="15 1108, 779 1108" stroke="red" stroke-width="3">
+  </polyline> 
+  <rect width="764" height="1093" x="15" y="15" fill="none" stroke="red" stroke-width="3">
+  </rect>
+</svg>

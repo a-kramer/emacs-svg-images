@@ -183,3 +183,49 @@ The image now works, it just makes no sense as a vector graphic. But,
 exported to PDF, it becomes exactly 12cm × 8cm (as intended, with the
 guessed DPI). Exported to PNG it has exactly the number of pixels the
 raw SVG numbers say.
+
+* Logarithmic Paper
+
+In this example, the goal is to draw a sheet of logarithmic paper.
+
+[[log-paper.el][./log-paper.el]]
+
+Here, =mapcar= and =dolist= were very useful.
+
+It's not easy to deal with the fact that =elisp= has many types, but
+the types are not that different from one another (list, array,
+sequence) and most functions are not capable of applying over lists if
+they are not defined for lists.
+
+As an example:
+
+#+begin_src R  :exports both
+  a <- 17.0     # a scalar
+  x <- seq(4)   # a vector
+  c(log(a),log(x))
+#+end_src
+
+#+RESULTS:
+|  2.83321334405622 |
+|                 0 |
+| 0.693147180559945 |
+|  1.09861228866811 |
+|  1.38629436111989 |
+
+In elisp, this is very different:
+
+#+begin_src elisp
+  (log 1)
+  (log '(1 2 3))
+  (log (last '(1 2 3)))
+  (log (car (last '(1 2 3))))
+#+end_src
+
+#+results:
+| (log 1)                     |                 0.0 |
+| (log '(1 2 3))              | Wrong type argument |
+| (log (last '(1 2 3)))       | Wrong type argument |
+| (log (car (last '(1 2 3)))) |  1.0986122886681098 |
+
+So, elisp seems to turn ugly really quickly and requires the definition of
+countless wrappers.
