@@ -1,6 +1,6 @@
 #+title: SVG Images in Emacs
 #+author: Andrei Kramer-Miehe
-#+date: <2024-07-02 Tue>
+#+date: <2024-10-01 Tue>
 
 Here are some thoughts about concepts that I don't find immediately
 self evident.
@@ -24,6 +24,7 @@ by default are interpreted as pixels. I interpret this as:
 \begin{equation}
  1\,\text{px} = f\,\text{cm}
 \end{equation}
+
 where $f$ is some small fractional number. But, in some circumstances
 a software may try to make the pixel size of the image literally
 correspond to the number of pixels of a screen, before anyone tries to
@@ -85,8 +86,8 @@ xml_grep --count '*' arbitrary-circle.fodg | awk 'NR==1 {print "any-tag: ", $2}'
 So, there are 311 tags to describe a single circle on a rectangle, and 63 namespaces are
 invoked. I don't like any of this.
 
-Observe that for some reason, the fodg file contains my =PrinterSetup=
-with =config:type="base64Binary"=. And also reveals where I was, when I
+Observe that for some reason, the fodg file contains my ~PrinterSetup~
+with ~config:type="base64Binary"~. And also reveals where I was, when I
 made it. None of this is necessary to draw a circle. The eps file is
 not compressed, but much smaller (probably still contains unnecessary
 data): 2868 characters.
@@ -95,16 +96,16 @@ data): 2868 characters.
 
 I don't like XML, SVG, nor CSS. But, they are /available/.
 
-Elisp (or any lisp), are interesting enough to experiment with, and I
-am trying to learn the syntax by constructing images with code.
+Elisp is interesting enough to experiment with, and I am trying to
+learn the syntax by constructing images with code.
 
 Maybe elisp is not the most awesomest language to ever exist, but I
-think that (e)lisp files are more readable than xml content, because they
-are written by humans.
+think that (e)lisp files are more readable than xml content, because
+they are almost always written by humans.
 
-I don't know of a vector image format that is widely adopted, and
-accessible (and not proprietary). I guess that Inkscape would offer
-it, if it existed. But, my search continues.
+I don't know of a simple, free vector image format that is widely
+adopted, and accessible. I guess that Inkscape would offer it, if it
+existed. But, my search continues.
 
 * A Circle with some label on it
 
@@ -125,7 +126,7 @@ numbers mostly.
 	    :fill "yellow" :stroke "red")
 #+end_src
 
-where the entire =svg-path= is quoted and cannot contain calculations
+where the entire ~svg-path~ is quoted and cannot contain calculations
 (Or at least: I don't know how it could).  So, instead:
 
 #+begin_src elsip
@@ -140,7 +141,7 @@ See, the full el file. The result is:
 [[./circle.svg][circle.svg]],
 
 ... albeit re-indented with new linefeeds inserted to make it more readable.
-Unedited =svg-print= has everything in one line.
+Unedited ~svg-print~ has everything in one line.
 
 Unfortunately, the path command in SVG, with the weird string parsing
 rules doesn't understand units, so, while most things work the path
@@ -148,20 +149,20 @@ command doesn't. In SVG language they use words like "viewport", viewBox, user
 coordinates. So, perhaps we need to define functions that convert
 between centimeters and pixels.
 
-There is a bad workaround, whcih requires a =viewBox= attribute to be
-defined, but the emacs svg package doesnt do that.
+There is a bad workaround, whcih requires a ~viewBox~ attribute to be
+defined, but the emacs svg package doesn't do that.
 
 ** Summary
 
-The =path= element prevents SVG images to be in physical units without
-postprocessing what =svg-print= writes.
+The ~path~ element prevents SVG images to be in physical units without
+postprocessing what ~svg-print~ writes.
 
 * Improved ELISP Code
 
 In the second version of this script
 [[./svg-test-px.el][svg-test-px.el]], the two helper functions =cm=
 and =mm= are now converting the input to pixels and don't add a unit
-to them to keep the =path= elements happy, they also round to the
+to them to keep the ~path~ elements happy, they also round to the
 nearest pixel. DPI values are often not up to us, it is not stored in
 the SVG file itself. So, if Inkscape changes its default DPI value for
 exports, then the image size will probably change when the image is
@@ -190,7 +191,7 @@ In this example, the goal is to draw a sheet of logarithmic paper.
 
 [[log-paper.el][./log-paper.el]]
 
-Here, =mapcar= and =dolist= were very useful.
+Here, ~mapcar~ and ~dolist~ were very useful.
 
 It's not easy to deal with the fact that =elisp= has many types, but
 the types are not that different from one another (list, array,
@@ -227,5 +228,7 @@ In elisp, this is very different:
 | (log (last '(1 2 3)))       | Wrong type argument |
 | (log (car (last '(1 2 3)))) |  1.0986122886681098 |
 
-So, elisp seems to turn ugly really quickly and requires the definition of
-countless wrappers.
+So, elisp seems to turn ugly really quickly and requires the
+definition of countless wrappers. (This has probably been remarked on
+countless times, but ~car~ and ~cdr~ are the most stupid names that I
+have ever seen for such fundamental parts of a language).
